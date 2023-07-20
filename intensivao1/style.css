@@ -1,0 +1,263 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  font-family: 'Mulish', sans-serif;;
+
+
+  --bg-primary: hsl(283, 47%, 97%);
+  --bg-secundary: linear-gradient(134deg, hsl(242, 50%, 38%) 0%, hsl(244, 38%, 28%) 100%);
+  --bg-tertiary:hsl(0, 0%, 100%);
+
+  --fc-primary: hsl(320, 69%, 42%);
+  --fc-secundary:hsl(244, 38%, 28%);
+
+  --bc-primary:hsl(244, 38%, 28%);
+}
+
+body{
+  font-family: 'Mulish', sans-serif;
+}
+
+
+
+.app{
+  max-width: 43rem;
+  margin: 0 auto;  
+  border: solid black 1px;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+}
+
+.header-text-arrow{
+  margin-top: 1.7rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+header > img:nth-child(1){
+  max-width:36rem;
+  object-fit: cover;
+  padding: 0 3.2rem;
+}
+
+header h1{
+  color: var(--fc-primary);
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+header h2{
+  color: var(--fc-secundary);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+header .arrow-down{
+  max-width: 6rem;
+  height: 10.5rem;
+  margin: 3.4rem 0 9.2rem;
+}
+
+.cards{
+  background: var(--bg-secundary);
+  padding: 5.2rem 3.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5.2rem;
+}
+
+.card{
+  background: var(--bg-tertiary);
+  border-radius: 2rem;
+  padding: 2.6rem 6rem 2.6rem 2.6rem;
+}
+
+.card h2{
+  color: var(--fc-primary);
+  font-size: 3rem;
+  font-weight: 900;
+  margin-top: 3.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.card p{
+  color: var(--fc-secundary);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.contacts{
+  background: var(--bg-primary);
+  padding: 6.8rem 4.0rem;
+}
+
+.contacts h2{
+  color:var(--fc-primary);
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 4.2rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.contacts #email,.contacts #name, .contacts textarea{
+  border-radius: 16px;
+  border: 1.5px solid var(--bc-primary);
+  
+}
+
+.contacts #email, .contacts #name{
+  height: 4.8rem;
+  padding: 1.2rem 1.4rem 1.2rem 5rem;
+  width: 100%;
+  color: var(--bc-primary);
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.6rem;
+}
+
+.contacts label{
+  position: relative;
+
+}
+
+.contacts img{
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  left: 1.4rem;
+  top: 3.4rem;
+
+}
+
+input::placeholder, textarea::placeholder{
+  font-family: 'Mulish', sans-serif;
+  color: var(--bc-primary);
+  font-size: 1.6rem;
+  font-weight: 600; 
+  line-height: 1.6rem;
+}
+
+.contacts textarea{
+  height: 12.6rem;
+  padding: 1.6rem;
+}
+
+form .button{
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #FFFFFF; 
+  width: 15rem;
+  border-radius: 1.6rem;
+  background: var(--bg-secundary);
+  height: 4.5rem;
+  border: none;
+  text-transform: capitalize;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background: var(--bg-secundary);
+  height: 7.8rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+}
+
+@media (min-width: 700px){
+
+  .app{
+    max-width: 90rem;
+  }
+   
+  
+
+  header{
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-template-areas: 'A B';
+    padding: 0 3rem 0 11rem;
+  }
+
+  .header-text-arrow{
+    grid-area: A;
+    align-items: start;
+    padding-top: 31rem;
+    
+  }
+
+ 
+  header .arrow-down{
+    min-width: 6rem;
+    margin: 20rem 0 10rem 0;
+  }
+
+  header{
+    position: relative;
+  }
+
+  header > img:nth-child(1){
+    
+    max-width: 70rem;
+    object-fit: cover;
+    
+  
+  }
+  
+
+  header h1{
+    font-size: 5.8rem;
+  }
+  
+  header h2{
+    font-size: 3.2rem;
+  }
+
+  .cards{
+    flex-direction: row;
+  }
+}
+
+
+@media (min-width: 1000px){
+  .app{
+    max-width: 144rem;
+  }
+
+  header{
+    position: relative;
+  }
+
+  header > img:nth-child(1){
+    position: absolute;
+    top: 0;
+    right: 3rem;
+    width: 144rem;
+    object-fit: cover;
+  }
+
+  
+
+}
